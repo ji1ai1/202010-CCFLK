@@ -1,6 +1,10 @@
 #python 3.9.0
 #python套件 pandas 1.1.4
-#
+#輸入：
+#	traffic/201907*.txt
+#	test.txt
+#輸出：
+#	result.csv
 #0.55033999
 import pandas
 
@@ -60,4 +64,3 @@ for 甲 in range(1, 4):
 提交表 = 預測表.loc[:, ["道路標識", "當前時間片", "待測時間片", "預測"]].copy()
 提交表.columns = ["link", "current_slice_id", "future_slice_id", "label"]
 提交表.to_csv("result.csv", index=False)
-
